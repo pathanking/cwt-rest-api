@@ -36,8 +36,8 @@ public class Customer {
         this.lastName = dto.getLastName();
         this.email = dto.getEmail();
         AddressDTO addressDTO = dto.getAddressDTO();
-        this.address.setCity(addressDTO.getCity());
-        this.address.setCountry(addressDTO.getCountry());
+        Address address1 = new Address(addressDTO);
+        this.address = address1;
         this.dob = dto.getDob();
     }
 
