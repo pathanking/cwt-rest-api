@@ -40,6 +40,11 @@ public class CustomerController {
         return service.getAllCustomers();
     }
 
+    @GetMapping("/{custId}")
+    public CustomerDTO getCustomerById(@PathVariable Integer custId){
+        return service.findCustomerById(custId);
+    }
+
 
 
 
